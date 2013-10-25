@@ -1,3 +1,3 @@
 Tree on Moonlight
 
-A Theme fot graphtftng ;)
+A Theme for graphtftng ;)

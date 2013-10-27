@@ -83,7 +83,7 @@
 
      
 // Ausgabe recording info
-   Text text={replayTitle},x=10,y=10,size=40,width=1000,height=65,lines=1,red=255,green=203,blue=12,scroll=marquee,scroll_count=0,dots=yes;
+   Text text={replayTitle},x=10,y=10,size=40,width=1000,height=65,lines=1,red=255,green=203,blue=12,scroll=ticker,delay=1,scroll_count=0,dots=yes;
    Text text={replaySubtitle},x=10,y=100,size=30,width=715,height=40,red=250,green=250,blue=250;
 
    var varStartLine = 0;
@@ -180,6 +180,11 @@
    Text text={time/%a %d.%m},x=1180,y=724,size=26,red=255,green=203,blue=12,align=left,width=165,height=38;
    Text text={time/%H:%M},x=1177,y=661,size=42,red=255,green=203,blue=12,align=left,width=165,height=60;
    TextList condition={actTimersRunning} = 1,text={actTimersStart/%a %H:%M}  -  {actTimersStop/ %H:%M}@{actTimersTitle},lines=2,x=1076,y=330,height=332,width=275,size=20,red=255,green=0,blue=0,overlay=yes;
+  
+   //Anzeige der Timer
+   TextList condition={actTimersRunning} = 1,text={actTimersStart/%a %H:%M}  -  {actTimersStop/ %H:%M}@{actTimersTitle},lines=2,x=1076,y=124,height=201,width=275,size=20,red=255,green=0,blue=0,overlay=yes;
+   TextList condition={actTimersRunning} = 0,text={actTimersStart/%a %H:%M}  -  {actTimersStop/ %H:%M}@{actTimersTitle},lines=2,x=1076,y=330,height=332,width=275,size=20,red=0,green=255,blue=0,overlay=yes;
+
 
 // Separator
    Rectangle x=0,y=377,width=1060,height=4,red=255,green=203,blue=12;
